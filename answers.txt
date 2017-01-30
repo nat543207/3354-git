@@ -1,0 +1,16 @@
+a.  After step 8, there are 7 commits
+b.  .gitinore was added in the fourth commit
+    (hash fdd71cb7dfd525ecf5330366f9cf880243b4d896)
+c.  "git log" shows a history of all commits, whereas "git status" shows the
+    status of the working directory with respect to the most recent commit
+d.  Unstaged changes are changes made to files that are already in the
+    repository, whereas untracked files are in the working directory but do not
+    yet have a counterpart counterpart in the repository's commit history.
+e.  "git checkout" changes the files in the working directory to match the
+    state recorded in a specified commit or branch, whereas "git reset" causes
+    the existing commit history to be changed to be replaced by the history
+    from a specified commit, effectively "forgetting" any commits more recent
+    than the one specified.
+f.  Git throws an error and will not complete the pull until the uncommitted
+    changes are stashed or the files containing them are removed from the
+    working directory.
