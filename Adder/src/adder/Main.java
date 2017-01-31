@@ -14,13 +14,24 @@ public class Main {
     }
 
     private static int addArguments(String... args) throws Exception {
-        if(args.length == 0)
-            throw new Exception("No arguments passed");
-
         int sum = 0;
-        for(String arg : args) {
-            sum += Integer.valueOf(arg);
+
+        if(args.length == 0) {
+            throw new Exception("No arguments passed");
         }
+        else if(args[0].equals("-")) {
+            args[0] = "0"; //Prevents exception being thrown in following loop
+
+            for(String arg : args) {
+                sum -= Integer.valueOf(arg);
+            }
+        }
+        else {
+            for(String arg : args) {
+                sum += Integer.valueOf(arg);
+            }
+        }
+
         return sum;
     }
 }
