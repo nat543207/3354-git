@@ -6,6 +6,8 @@ public class Main {
         try {
             int result = addArguments(args);
             System.out.println(result);
+        } catch (NumberFormatException e) {
+            System.err.println("Please ensure only numeric arguments are passed");
         } catch (Exception e) {
             System.err.println("Please provide any number of integers to add");
         }
